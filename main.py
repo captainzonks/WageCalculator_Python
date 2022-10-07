@@ -5,7 +5,7 @@ from Data import Data
 
 def ask_for_wage(data: Data):
     wage = input("Please enter your wage: ")
-    data.wage = int(wage)
+    data.wage = float(wage)
 
 
 def ask_to_change_wage(data: Data):
@@ -16,14 +16,14 @@ def ask_to_change_wage(data: Data):
 
 def ask_for_hours(data: Data):
     hours = input("How many hours did you work today? ")
-    data.today_hours = int(hours)
-    data.add_hours(int(hours))
+    data.today_hours = float(hours)
+    data.add_hours(float(hours))
 
 
 def ask_for_tips(data: Data):
     tips = input("Enter tips: ")
-    data.today_tips = int(tips)
-    data.total_tips += int(tips)
+    data.today_tips = float(tips)
+    data.total_tips += float(tips)
 
 
 def print_pretty_data(data: Data):

@@ -6,15 +6,15 @@ FICA_STATE_INS_TAX = 0.0765
 class Data:
 
     def __init__(self):
-        self.wage: int = 0
+        self.wage: float = 0
         self.days: int = 0
-        self.total_hours: int = 0
-        self.total_tips: int = 0
-        self.today_hours: int = 0
-        self.today_tips: int = 0
-        self.total_wages_earned: int = 0
+        self.total_hours: float = 0
+        self.total_tips: float = 0
+        self.today_hours: float = 0
+        self.today_tips: float = 0
+        self.total_wages_earned: float = 0
 
-    def add_hours(self, hours: int):
+    def add_hours(self, hours: float):
         self.total_hours += hours
         self.days += 1
 
