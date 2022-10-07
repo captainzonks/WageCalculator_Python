@@ -4,24 +4,51 @@ from Data import Data
 
 
 def ask_for_wage(data: Data):
-    wage = input("Please enter your wage: ")
+    while True:
+        user_input = input("Please enter your wage: ")
+        try:
+            wage = float(user_input)
+            if isinstance(wage, float):
+                break
+        except ValueError:
+            print("Value is not a number.")
+            pass
+
     data.wage = float(wage)
 
 
 def ask_to_change_wage(data: Data):
-    answer = input(f"Would you like to change your wage from ${data.wage}? ")
+    answer = input(f"Would you like to change your wage from ${data.wage:.2f}? ('y' or 'n') ")
     if answer.lower() == 'y':
         ask_for_wage(data)
 
 
 def ask_for_hours(data: Data):
-    hours = input("How many hours did you work today? ")
+    while True:
+        user_input = input("How many hours did you work today? ")
+        try:
+            hours = float(user_input)
+            if isinstance(hours, float):
+                break
+        except ValueError:
+            print("Value is not a number.")
+            pass
+
     data.today_hours = float(hours)
     data.add_hours(float(hours))
 
 
 def ask_for_tips(data: Data):
-    tips = input("Enter tips: ")
+    while True:
+        user_input = input("Enter tips: ")
+        try:
+            tips = float(user_input)
+            if isinstance(tips, float):
+                break
+        except ValueError:
+            print("Value is not a number.")
+            pass
+
     data.today_tips = float(tips)
     data.total_tips += float(tips)
 
