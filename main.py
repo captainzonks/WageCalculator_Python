@@ -50,13 +50,13 @@ if __name__ == '__main__':
 
     if exists:
         with open("data", 'r') as file:
-            today_data.wage = int(file.readline())
-            today_data.total_hours = int(file.readline())
+            today_data.wage = float(file.readline())
+            today_data.total_hours = float(file.readline())
             today_data.days = int(file.readline())
-            today_data.total_tips = int(file.readline())
-            today_data.today_hours = int(file.readline())
-            today_data.today_tips = int(file.readline())
-            today_data.total_wages_earned = int(file.readline())
+            today_data.total_tips = float(file.readline())
+            today_data.today_hours = float(file.readline())
+            today_data.today_tips = float(file.readline())
+            today_data.total_wages_earned = float(file.readline())
 
     ask_to_change_wage(today_data)
     ask_for_hours(today_data)
